@@ -1,0 +1,1 @@
+This is a simple java progrem to demo AES encryption and decryption
