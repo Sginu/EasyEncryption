@@ -12,8 +12,11 @@ public class AESEncryption {
            String plainText = "AES symmetric encryption";
            System.out.println("Input string : "+plainText);
 
+           SecureRandom random = new SecureRandom();
+           random.nextBytes(new byte[16]);
+
            KeyGenerator keyGen = KeyGenerator.getInstance("AES");
-           keyGen.init(128);
+           keyGen.init(128, random);
            SecretKey secret = keyGen.generateKey();
 
            cipher = Cipher.getInstance("AES");
